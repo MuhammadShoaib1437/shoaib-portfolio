@@ -1,3 +1,27 @@
+// Typing effect for hero tagline
+(function(){
+  const words = ["eBay & Etsy", "Listing SEO", "Store Growth", "Marketplaces"];
+  const el = document.getElementById('typed');
+  if(!el) return;
+  let wi = 0, ci = 0, deleting = false;
+  function tick(){
+    const word = words[wi];
+    el.textContent = word.slice(0, ci);
+    let delay = deleting ? 45 : 95;
+    if(!deleting && ci === word.length){ delay = 1600; deleting = true; }
+    else if(deleting && ci === 0){ deleting = false; wi = (wi+1)%words.length; delay = 350; }
+    else ci += deleting ? -1 : 1;
+    setTimeout(tick, delay);
+  }
+  tick();
+})();
+
+// Duplicate marquee for seamless loop
+(function(){
+  const track = document.getElementById('marqueeTrack');
+  if(track) track.innerHTML += track.innerHTML;
+})();
+
 // Mobile menu
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
