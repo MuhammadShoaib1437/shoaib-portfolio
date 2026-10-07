@@ -54,6 +54,8 @@ a{text-decoration:none;color:inherit}
 .hero-social a{width:42px;height:42px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s}
 .hero-social svg{width:18px;height:18px;fill:#fff}
 .hero-social a:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px)}
+.hero-social a.fiverr-icon svg circle{fill:#1dbf73}
+.hero-social a.fiverr-icon:hover{background:#1dbf73;border-color:#1dbf73}
 .scroll-down{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:26px;height:44px;border:2px solid #666;border-radius:14px;display:flex;justify-content:center;padding-top:8px}
 .scroll-down span{width:4px;height:10px;background:var(--red);border-radius:2px;animation:scroll 1.6s infinite}
 @keyframes scroll{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
